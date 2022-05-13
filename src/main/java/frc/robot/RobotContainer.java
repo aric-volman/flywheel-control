@@ -46,7 +46,7 @@ public class RobotContainer {
     return null;
   }
 
-  public static Joystick getJoy1(){
+  public static Joystick getJoy1() {
     return joystick1;
   }
 }

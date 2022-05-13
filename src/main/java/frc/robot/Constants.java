@@ -20,6 +20,11 @@ public final class Constants {
         public static final int rollerPort = 15;
     }
 
+    public static final class USBOrder {
+        public static final int Zero = 0;
+        public static final int One = 1;
+    }
+
     public static final class leftFlywheelPIDConsts {
         public static double pidP = 0.0;
         public static double pidI = 0.0;
@@ -42,9 +47,5 @@ public final class Constants {
         public static final double kS = 0.0;
         public static final double kV = 0.0;
         public static final double kA = 0.0;
-    }
-    public static final class USBOrder {
-        public static final int Zero = 0;
-        public static final int One = 1;
     }
 }

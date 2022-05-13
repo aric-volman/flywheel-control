@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+
 import frc.robot.Constants;
 import frc.robot.RobotContainer;
 
@@ -35,6 +36,8 @@ public class Shooter extends SubsystemBase {
   private boolean override = false; // Helps us switch from manual to auto
 
   private Timer overrideTimer = new Timer(); // We want a toggle button of some sorts
+
+  private double overrideTime = 1.0;
 
   /* Initialize the talons */
   private final WPI_TalonSRX leftFlywheel = new WPI_TalonSRX(Constants.ShooterPorts.LeftFlywheelPort);
@@ -96,7 +99,7 @@ public class Shooter extends SubsystemBase {
   }
 
   // ------------------- FLYWHEEL METHODS ------------------- //
-  public void resetFlywheelEncoders(){
+  public void resetFlywheelEncoders() {
     leftFlywheel.setSelectedSensorPosition(0, 0, 10);
     rightFlywheel.setSelectedSensorPosition(0, 0, 10);
   }
@@ -154,7 +157,7 @@ public class Shooter extends SubsystemBase {
     SmartDashboard.putNumber("Right Flywheel Power", getRightFlywheelPower());
 
     /* Override logic */
-    if (RobotContainer.getJoy1().getRawButton(2) && overrideTimer.get() <= 1.0) {
+    if (RobotContainer.getJoy1().getRawButton(2) && overrideTimer.get() >= overrideTime) {
       override = !override;
       overrideTimer.reset();
     }
