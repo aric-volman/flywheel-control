@@ -21,27 +21,27 @@ public final class Constants {
     }
 
     public static final class leftFlywheelPIDConsts {
-        public static double pidP = 0.07;
-        public static double pidI = 0;
-        public static double pidD = 0;
+        public static double pidP = 0.0;
+        public static double pidI = 0.0;
+        public static double pidD = 0.0;
     }
 
     public static final class rightFlywheelPIDConsts {
-        public static double pidP = 0.07;
-        public static double pidI = 0;
-        public static double pidD = 0;
+        public static double pidP = 0.0;
+        public static double pidI = 0.0;
+        public static double pidD = 0.0;
     }
 
-    public static final class leftFlywheelFF { // Tested on last year's chassis, not this year!
-        public static final double kS = 0.41733;
-        public static final double kV = 0.4025;
-        public static final double kA = 0.046839;
+    public static final class leftFlywheelFF { 
+        public static final double kS = 0.0;
+        public static final double kV = 0.0;
+        public static final double kA = 0.0;
     }
 
-    public static final class rightFlywheelFF { // Tested on last year's chassis, not this year!
-        public static final double kS = 0.41733;
-        public static final double kV = 0.4025;
-        public static final double kA = 0.046839;
+    public static final class rightFlywheelFF { 
+        public static final double kS = 0.0;
+        public static final double kV = 0.0;
+        public static final double kA = 0.0;
     }
     public static final class USBOrder {
         public static final int Zero = 0;
