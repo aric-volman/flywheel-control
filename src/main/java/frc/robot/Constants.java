@@ -37,13 +37,13 @@ public final class Constants {
         public static double pidD = 0.0;
     }
 
-    public static final class leftFlywheelFF { 
+    public static final class leftFlywheelFF {  // In rotations per second
         public static final double kS = 0.0;
         public static final double kV = 0.0;
         public static final double kA = 0.0;
     }
 
-    public static final class rightFlywheelFF { 
+    public static final class rightFlywheelFF { // In rotations per second
         public static final double kS = 0.0;
         public static final double kV = 0.0;
         public static final double kA = 0.0;

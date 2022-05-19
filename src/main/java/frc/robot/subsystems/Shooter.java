@@ -138,8 +138,8 @@ public class Shooter extends SubsystemBase {
   }
 
   public void setFlywheelConstantVelocity(double RPM) {
-    leftFlywheel.setVoltage(leftFlywheelFF.calculate(RPM) + leftFlywheelPID.calculate(getLeftRPM(), RPM));
-    rightFlywheel.set(rightFlywheelFF.calculate(RPM) + rightFlywheelPID.calculate(getRightRPM(), RPM));
+    leftFlywheel.setVoltage((leftFlywheelFF.calculate(RPM/60.0)*60.0) + leftFlywheelPID.calculate(getLeftRPM(), RPM));
+    rightFlywheel.set((rightFlywheelFF.calculate(RPM/60.0)*60.0) + rightFlywheelPID.calculate(getRightRPM(), RPM));
   }
 
   @Override
